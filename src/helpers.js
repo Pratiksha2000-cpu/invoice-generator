@@ -53,8 +53,8 @@ export function formatDisplayDate(dateString) {
   });
 }
 
-export async function generatePDF(invoice, calculations, currencySymbol) {
-  const { jsPDF } = await import('jspdf');
+export function generatePDF(invoice, calculations, currencySymbol) {
+  const { jsPDF } = window.jspdf;
 
   return new Promise((resolve, reject) => {
     try {
